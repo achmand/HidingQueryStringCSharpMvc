@@ -1,0 +1,23 @@
+﻿@model HidingQueryString.Models.StringListModel
+
+@{
+    ViewBag.Title = "GetStringList";
+}
+
+<h2>Get String List</h2>
+
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.HiddenStringList)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Click Me","ShowValue","HideMe",new {value = item},null)
+            </td>
+        </tr>
+    }
+
+</table>
